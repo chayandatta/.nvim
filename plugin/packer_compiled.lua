@@ -119,6 +119,11 @@ _G.packer_plugins = {
     path = "/Users/chayan/.local/share/nvim/site/pack/packer/start/harpoon",
     url = "https://github.com/ThePrimeagen/harpoon"
   },
+  ["julia-vim"] = {
+    loaded = true,
+    path = "/Users/chayan/.local/share/nvim/site/pack/packer/start/julia-vim",
+    url = "https://github.com/JuliaEditorSupport/julia-vim"
+  },
   ["lsp-zero.nvim"] = {
     loaded = true,
     path = "/Users/chayan/.local/share/nvim/site/pack/packer/start/lsp-zero.nvim",

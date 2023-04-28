@@ -46,6 +46,6 @@ return require('packer').startup(function(use)
 		  {'rafamadriz/friendly-snippets'},
 	  }
   }
-  
+  use ('JuliaEditorSupport/julia-vim')
   use ('neovim/nvim-lsp')
 end)
