@@ -10,6 +10,14 @@ end
 
 bufferline.setup({
     options = {
+        offsets = {
+            {
+                filetype = "NvimTree",
+                text = "File Explorer",
+                highlight = "Directory",
+                separator = true -- use a "true" to enable the default, or set your own character
+            }
+        },
         indicator_icon = "▎",
         modified_icon = "●",
         buffer_close_icon = "",
@@ -39,4 +47,3 @@ bufferline.setup({
 local keymap = vim.keymap.set
 keymap("n", "<S-l>", ":bnext<CR>", opts)
 keymap("n", "<S-h>", ":bprevious<CR>", opts)
-
