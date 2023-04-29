@@ -14,7 +14,6 @@ return require('packer').startup(function(use)
   }
   
   use ({ "catppuccin/nvim", as = "catppuccin" })
-  
   vim.cmd('colorscheme catppuccin')
 
   use ('nvim-treesitter/nvim-treesitter', { run = ':TSUpdate'})
@@ -24,22 +23,32 @@ return require('packer').startup(function(use)
   use ('mbbill/undotree')
   use ('tpope/vim-fugitive')
 
-    use {
-	  'VonHeikemen/lsp-zero.nvim',
-	  branch = 'v1.x',
-	  requires = {
-		  -- LSP Support
-		  {'neovim/nvim-lspconfig'},
-		  {'williamboman/mason.nvim'},
-		  {'williamboman/mason-lspconfig.nvim'},
+  -- lua line for the below status bar
+  use {
+      'nvim-lualine/lualine.nvim',
+      requires = { 'nvim-tree/nvim-web-devicons', opt = true }
+  }
+  -- bufferline for the above tabs
+  use {'akinsho/bufferline.nvim', tag = "*", requires = 'nvim-tree/nvim-web-devicons'}
 
-		  -- Autocompletion
-		  {'hrsh7th/nvim-cmp'},
-		  {'hrsh7th/cmp-buffer'},
-		  {'hrsh7th/cmp-path'},
-		  {'saadparwaiz1/cmp_luasnip'},
-		  {'hrsh7th/cmp-nvim-lsp'},
-		  {'hrsh7th/cmp-nvim-lua'},
+  use {
+      'VonHeikemen/lsp-zero.nvim',
+      branch = 'v1.x',
+      requires = {
+          -- LSP Support
+          {'neovim/nvim-lspconfig'},
+          {'williamboman/mason.nvim'},
+          {'williamboman/mason-lspconfig.nvim'},
+
+          -- Autocompletion
+          {'hrsh7th/nvim-cmp'},
+          {'hrsh7th/cmp-buffer'},
+          {'hrsh7th/cmp-path'},
+          {'saadparwaiz1/cmp_luasnip'},
+          {'hrsh7th/cmp-nvim-lsp'},
+          {'hrsh7th/cmp-nvim-lua'},
+          {'github/copilot.vim'},
+          {'glepnir/lspsaga.nvim'},
 
 		  -- Snippets
 		  {'L3MON4D3/LuaSnip'},
@@ -48,4 +57,7 @@ return require('packer').startup(function(use)
   }
   use ('JuliaEditorSupport/julia-vim')
   use ('neovim/nvim-lsp')
+
+
+  -- completion
 end)
