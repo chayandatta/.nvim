@@ -59,6 +59,10 @@ return require('packer').startup(function(use)
     use('JuliaEditorSupport/julia-vim')
     use('neovim/nvim-lsp')
 
+    use { "akinsho/toggleterm.nvim", tag = '*', config = function()
+        require("toggleterm").setup()
+    end }
+
 
     -- completion
 end)
