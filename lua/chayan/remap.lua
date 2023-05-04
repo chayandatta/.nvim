@@ -59,6 +59,6 @@ vim.keymap.set('n', '<leader>gg', require('telescope.builtin').live_grep, { desc
 -- TERMINAL SETUP
 require("toggleterm").setup{
 	direction = "horizontal",
-	size = 90,
+	size = 10,
 	open_mapping = "<C-`>"
 }
