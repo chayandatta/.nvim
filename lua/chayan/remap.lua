@@ -1,3 +1,9 @@
+local nmap = function(keys, func, desc)
+    if desc then
+        desc = 'LSP: ' .. desc
+    end
+end
+
 vim.g.mapleader = " "
 vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
 
@@ -36,4 +42,23 @@ vim.keymap.set("n", "<leader>x", "<cmd>!chmod +x %<CR>", { silent = true })
 
 vim.keymap.set("n", "<leader>vpp", "<cmd>e ~/.dotfiles/nvim/.config/nvim/lua/theprimeagen/packer.lua<CR>");
 
-vim.keymap.set("n", "<leader>gt", ":ToggleTerm size=10<CR>")
+nmap('gi', vim.lsp.buf.implementation, '[G]oto [I]mplementation')
+nmap('td', vim.lsp.buf.type_definition, 'Type [D]efinition')
+
+vim.keymap.set('n', '<leader>?', require('telescope.builtin').oldfiles, { desc = '[?] Find recently opened files' })
+vim.keymap.set('n', '<leader><space>', require('telescope.builtin').buffers, { desc = '[ ] Find existing buffers' })
+vim.keymap.set('n', '<leader>ff', function()
+    require('telescope.builtin').current_buffer_fuzzy_find(require('telescope.themes').get_dropdown {
+        winblend = 10,
+        previewer = false,
+    })
+end, { desc = '[/] Fuzzily search in current buffer' })
+
+vim.keymap.set('n', '<leader>gg', require('telescope.builtin').live_grep, { desc = '[S]earch by [G]rep' })
+
+-- TERMINAL SETUP
+require("toggleterm").setup{
+	direction = "horizontal",
+	size = 90,
+	open_mapping = "<C-`>"
+}
