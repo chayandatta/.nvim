@@ -92,7 +92,10 @@ return require('packer').startup(function(use)
     }
     -- "gc" to comment visual regions/lines
     use { 'numToStr/Comment.nvim', opts = {} }
+    -- symbols outline
+    use { 'simrat39/symbols-outline.nvim' }
 
+    use { 'rmagatti/goto-preview' }
 
     -- completion
 end)
