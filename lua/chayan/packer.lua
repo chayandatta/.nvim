@@ -32,6 +32,9 @@ return require('packer').startup(function(use)
     -- bufferline for the above tabs
     use { 'akinsho/bufferline.nvim', tag = "*", requires = 'nvim-tree/nvim-web-devicons' }
 
+    -- Tabnine auto-completion
+    use { 'codota/tabnine-nvim', run = "./dl_binaries.sh" }
+
     use {
         'VonHeikemen/lsp-zero.nvim',
         branch = 'v1.x',

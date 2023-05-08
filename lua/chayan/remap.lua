@@ -57,8 +57,8 @@ end, { desc = '[/] Fuzzily search in current buffer' })
 vim.keymap.set('n', '<leader>gg', require('telescope.builtin').live_grep, { desc = '[S]earch by [G]rep' })
 
 -- TERMINAL SETUP
-require("toggleterm").setup{
-	direction = "horizontal",
-	size = 10,
-	open_mapping = "<C-`>"
+require("toggleterm").setup {
+    direction = "horizontal",
+    size = 10,
+    open_mapping = "<C-`>"
 }
