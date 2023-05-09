@@ -94,8 +94,9 @@ return require('packer').startup(function(use)
     use { 'numToStr/Comment.nvim', opts = {} }
     -- symbols outline
     use { 'simrat39/symbols-outline.nvim' }
-
+    -- goto preview
     use { 'rmagatti/goto-preview' }
+    -- milti line selector
+    use {'mg979/vim-visual-multi'}
 
-    -- completion
 end)

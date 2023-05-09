@@ -255,6 +255,11 @@ _G.packer_plugins = {
     path = "/Users/chayan/.local/share/nvim/site/pack/packer/start/vim-fugitive",
     url = "https://github.com/tpope/vim-fugitive"
   },
+  ["vim-visual-multi"] = {
+    loaded = true,
+    path = "/Users/chayan/.local/share/nvim/site/pack/packer/start/vim-visual-multi",
+    url = "https://github.com/mg979/vim-visual-multi"
+  },
   ["which-key.nvim"] = {
     loaded = true,
     path = "/Users/chayan/.local/share/nvim/site/pack/packer/start/which-key.nvim",
