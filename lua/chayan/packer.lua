@@ -95,8 +95,12 @@ return require('packer').startup(function(use)
     -- symbols outline
     use { 'simrat39/symbols-outline.nvim' }
     -- goto preview
-    use { 'rmagatti/goto-preview' }
+    use {
+        'rmagatti/goto-preview',
+        config = function()
+            require('goto-preview').setup { default_mappings = true }
+        end
+    }
     -- milti line selector
-    use {'mg979/vim-visual-multi'}
-
+    use { 'mg979/vim-visual-multi' }
 end)
