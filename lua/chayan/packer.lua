@@ -103,4 +103,12 @@ return require('packer').startup(function(use)
     }
     -- milti line selector
     use { 'mg979/vim-visual-multi' }
+
+    -- AutoPair --
+    use {
+        'windwp/nvim-autopairs',
+        config = function()
+            require("nvim-autopairs").setup {}
+        end
+    }
 end)
