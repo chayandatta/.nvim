@@ -118,4 +118,13 @@ return require('packer').startup(function(use)
             require('nvim_comment').setup()
         end
     }
+    -- VScode lightbulb
+    use {
+        'kosayoda/nvim-lightbulb',
+        config = function()
+            require('nvim-lightbulb').setup {}
+        end
+    }
+    -- telescope UI actions
+    use {'nvim-telescope/telescope-ui-select.nvim' }
 end)

@@ -1,7 +1,7 @@
 local nmap = function(keys, func, desc)
-    if desc then
-        desc = 'LSP: ' .. desc
-    end
+	if desc then
+		desc = 'LSP: ' .. desc
+	end
 end
 
 vim.g.mapleader = " "
@@ -46,18 +46,19 @@ nmap('td', vim.lsp.buf.type_definition, 'Type [D]efinition')
 vim.keymap.set('n', '<leader>?', require('telescope.builtin').oldfiles, { desc = '[?] Find recently opened files' })
 vim.keymap.set('n', '<leader><space>', require('telescope.builtin').buffers, { desc = '[ ] Find existing buffers' })
 vim.keymap.set('n', '<leader>ff', function()
-    require('telescope.builtin').current_buffer_fuzzy_find(require('telescope.themes').get_dropdown {
-        winblend = 10,
-        previewer = false,
-    })
+	require('telescope.builtin').current_buffer_fuzzy_find(require('telescope.themes').get_dropdown {
+		winblend = 10,
+		previewer = false,
+	})
 end, { desc = '[/] Fuzzily search in current buffer' })
 
 vim.keymap.set('n', '<leader>gg', require('telescope.builtin').live_grep, { desc = '[S]earch by [G]rep' })
 
 -- TERMINAL SETUP
 require("toggleterm").setup {
-    direction = "horizontal",
-    size = 10,
-    open_mapping = "<C-`>"
+	direction = "horizontal",
+	size = 10,
+	open_mapping = "<C-`>"
 }
 
+vim.keymap.set('n', '<leader>g', ':lua vim.lsp.buf.code_action()<CR>')
