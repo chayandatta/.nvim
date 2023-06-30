@@ -126,5 +126,29 @@ return require('packer').startup(function(use)
         end
     }
     -- telescope UI actions
-    use {'nvim-telescope/telescope-ui-select.nvim' }
+    use { 'nvim-telescope/telescope-ui-select.nvim' }
+    -- line break lsp lines
+    use({
+        "https://git.sr.ht/~whynothugo/lsp_lines.nvim",
+        config = function()
+            require("lsp_lines").setup()
+        end,
+    })
+    -- hop
+    use {
+        'phaazon/hop.nvim',
+        branch = 'v2', -- optional but strongly recommended
+        config = function()
+            -- you can configure Hop the way you like here; see :h hop-config
+            require 'hop'.setup { keys = 'etovxqpdygfblzhckisuran' }
+        end
+    }
+
+
+    use {
+        "HampusHauffman/block.nvim",
+        config = function()
+            require("block").setup({})
+        end
+    }
 end)
