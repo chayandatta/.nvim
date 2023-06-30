@@ -144,7 +144,7 @@ return require('packer').startup(function(use)
         end
     }
 
-
+    -- block
     use {
         "HampusHauffman/block.nvim",
         config = function()

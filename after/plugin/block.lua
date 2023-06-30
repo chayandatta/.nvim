@@ -8,7 +8,7 @@ require("block").setup({
     percent = 0.8,
     depth = 4,
     automatic = false,
-    --      bg = nil,
+    bg = "#CFD8DC",
     colors = {
         "#303F9F",
         "#607D8B",
