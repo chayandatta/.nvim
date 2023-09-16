@@ -3,6 +3,7 @@ vim.g.loaded_netrwPlugin = 1
 
 require("nvim-tree").setup({
     view = {
+        side = 'right',
         adaptive_size = true
     }
 })
