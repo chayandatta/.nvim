@@ -45,7 +45,7 @@ Before setting up this Neovim configuration, ensure you have the following insta
 1. **Clone the Repository:** Clone this repository to your preferred location:
 
    ```bash
-   git clone https://github.com/yourusername/neovim-config.git ~/.config/nvim
+   git clone https://github.com/chayandatta/nvim.git ~/.config/nvim
    ```
 
 2. **Install Plugin Manager:** This configuration uses a plugin manager. If not installed, run:
@@ -70,9 +70,9 @@ Before setting up this Neovim configuration, ensure you have the following insta
 
 Key mappings have been designed to provide a more intuitive and efficient editing experience. Here are some essential key mappings:
 
-- `<Leader>`: The leader key is set to `,` (comma) by default.
-- `Ctrl + S`: Save the current file.
-- `Ctrl + Q`: Close Neovim.
+- `<Leader>`: The leader key is set to `<space-bar>` (spacebar) by default.
+- `:w`: Save the current file.
+- `:q`: Close Neovim.
 
 For more key mappings, please refer to the `init.vim` file.
 
